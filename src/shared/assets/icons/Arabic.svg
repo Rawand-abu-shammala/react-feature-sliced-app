@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="800px" height="800px" viewBox="0 0 36 36"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+role="img"
+preserveAspectRatio="xMidYMid meet">
+
+  <path fill="#000000" d="M0 5h36v9H0z"></path>
+
+  <path fill="#FFFFFF" d="M0 14h36v9H0z"></path>
+
+  <path fill="#007A3D" d="M0 23h36v8H0z"></path>
+
+  <path fill="#CE1126" d="M0 5L16 18L0 31V5z"></path>
+
+</svg>

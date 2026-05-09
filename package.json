@@ -14,10 +14,13 @@
   "dependencies": {
     "@testing-library/react": "^16.3.2",
     "i18next": "^26.0.8",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "i18next-http-backend": "^4.0.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-error-boundary": "^6.1.1",
     "react-i18next": "^17.0.6",
+    "react-router-dom": "^7.15.0",
     "sass": "^1.99.0"
   },
   "devDependencies": {
@@ -48,6 +51,8 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10",
+    "vite-plugin-svgr": "^5.2.0",
+    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.5"
   }
 }
