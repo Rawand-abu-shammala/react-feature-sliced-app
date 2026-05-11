@@ -4,7 +4,7 @@ import { cn } from "@/shared/lib";
 
 type AppIconTheme = "clean" | "background";
 
-interface AppIconProps {
+export interface AppIconProps {
   Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
   theme?: AppIconTheme;
   size?: number;

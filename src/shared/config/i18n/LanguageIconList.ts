@@ -1,7 +1,7 @@
 import type { FunctionComponent, SVGProps } from "react";
 import type { supportedLngs } from "./i18n";
 
-import ArabicIcon from "../../assets/icons/Arabic.svg?react";
+import ArabicIcon from "@/shared/assets/icons/Arabic.svg?react";
 import EnglishIcon from "@/shared/assets/icons/English.svg?react";
 
 export type SupportedLngsType = (typeof supportedLngs)[number];

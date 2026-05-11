@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Input } from "./Input";
 import { AppIcon } from "../AppIcon/AppIcon";
-import SearchIcon from "../../assets/icons/Search.svg?react";
+import SearchIcon from "@/shared/assets/icons/Search.svg?react";
 
 const meta = {
   title: "shared/Input",
