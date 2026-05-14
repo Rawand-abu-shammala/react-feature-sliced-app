@@ -55,7 +55,7 @@ export const PhoneInput = (props: InputProps) => {
           [styles.disabled]: disabled,
           [styles.error]: error,
         })}
-        className={cn(styles.inputContainer, className, {
+        className={cn(styles["input-container"], className, {
           [styles.rounded]: rounded,
           [styles.disabled]: disabled,
           [styles.focus]: focus,

@@ -1,42 +1,63 @@
 {
   "header": {
-    "cart": "سلة التسوق",
-    "searchBy": "ابحث عن",
-    "login": "تسجيل الدخول"
+    "cart": "Warenkorb",
+    "searchBy": "Suchen nac",
+    "login": "Einloggen",
+    "logout": "Admelden"
   },
   "footer": {
-    "about": "من نحن",
-    "aboutUs": "من نحن",
-    "ourBranches": "فروعنا",
-    "changelog": "سجل التغييرات",
-    "quickLinks": "روابط سريعة",
-    "faqs": "الأسئلة الشائعة",
-    "recipes": "الوصفات",
-    "contactUs": "اتصل بنا",
-    "helpSupport": "المساعدة والدعم",
-    "termsOfService": "شروط الخدمة",
-    "privacyPolicy": "سياسة الخصوصية",
-    "security": "الأمان",
-    "company": "الشركة",
-    "blog": "المدونة",
-    "contact": "التواصل",
-    "social": "وسائل التواصل",
-    "facebook": "فيسبوك",
-    "instagram": "إنستغرام",
-    "twitter": "تويتر",
-    "copyright": "جميع الحقوق محفوظة © {{year}} {{company}}"
+    "about": "Über uns",
+    "aboutUs": "Über uns",
+    "ourBranches": "Unsere Filialen",
+    "changelog": "Änderungsprotokoll",
+    "quickLinks": "Schnellzugriff",
+    "faqs": "Häufige Fragen",
+    "recipes": "Rezepte",
+    "contactUs": "Kontakt",
+    "helpSupport": "Hilfe & Support",
+    "termsOfService": "Nutzungsbedingungen",
+    "privacyPolicy": "Datenschutzerklärung",
+    "security": "Sicherheit",
+    "company": "Unternehmen",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "social": "Soziale",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "copyright": "Alle Rechte vorbehalten © {{year}} {{company}}"
   },
   "pageLoader": {
-    "loading": "جارٍ التحميل..."
+    "loading": "Wird gelanden..."
+  },
+
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die Seite, die Sie suchen, ist nicht verfügbar. Versuchen Sie es erneut oder verwenden Sie die Zurück-Schaltfläche unten.",
+    "goBack": "Zurück"
   },
   "pageError": {
-    "title": "حدث خطأ ما",
-    "description": "نعتذر، حدث خطأ غير متوقع. يرجى تحديث الصفحة أو المحاولة مرة أخرى لاحقًا.",
-    "reload": "إعادة المحاولة"
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Es tut uns leid – ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie, die Seite zu aktualisieren oder kommen Sie später zurück.",
+    "reload": "Erneut versuchen"
   },
-  "notFound": {
-    "title": "الصفحة غير موجودة",
-    "description": "الصفحة التي تبحث عنها غير متوفرة. حاول مرة أخرى أو استخدم زر الرجوع أدناه.",
-    "goBack": "الرجوع"
+  "errors": {
+    "CONTACT_REQUIRED": "Bitte E-Mail oder Telefon angeben",
+    "USER_NOT_FOUND": "Benutzer nicht gefunden",
+    "USER_ALREADY_EXISTS": "Benutzer existiert bereits",
+    "USER_ALREADY_VERIFIED": "Benutzer ist bereits verifiziert",
+    "GOOGLE_USER_NO_VERIFICATION": "Google-Nutzer benötigen keine Verifizierung",
+    "VERIFICATION_TOO_MANY_CODES": "Zu viele Codes angefordert. Bitte später erneut versuchen.",
+    "GOOGLE_AUTH_FAILED": "Google-Authentifizierung fehlgeschlagen",
+    "GOOGLE_CODE_INVALID": "Ungültiger oder abgelaufener Google-Code",
+    "LOGIN_USE_GOOGLE": "Dieses Konto verwendet Google-Anmeldung. Bitte mit Google fortfahren.",
+    "ACCOUNT_NOT_VERIFIED": "Bitte verifizieren Sie Ihr Konto vor dem Login",
+    "INVALID_CREDENTIALS": "Ungültige Anmeldedaten",
+    "REFRESH_TOKEN_MISSING": "Refresh-Token fehlt",
+    "REFRESH_TOKEN_INVALID": "Ungültiger Refresh-Token",
+    "REFRESH_TOKEN_REVOKED": "Refresh-Token widerrufen",
+    "REFRESH_TOKEN_EXPIRED": "Refresh-Token abgelaufen",
+    "REFRESH_TOKEN_MISMATCH": "Refresh-Token stimmt nicht überein",
+    "CODE_REQUIRED": "Code ist erforderlich"
   }
 }

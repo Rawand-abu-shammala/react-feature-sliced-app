@@ -14,7 +14,10 @@ import { Button } from "../Button/Button";
 
 import styles from "./Input.module.scss";
 
-type HTMLInputType = Omit<InputHTMLAttributes<HTMLInputElement>, "onChange">;
+export type HTMLInputType = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange"
+>;
 
 export interface InputProps extends HTMLInputType {
   className?: string;
@@ -70,7 +73,7 @@ export const Input = (props: InputProps) => {
         </label>
       )}
       <div
-        className={cn(styles.inputContainer, className, {
+        className={cn(styles["input-container"], className, {
           [styles.rounded]: rounded,
           [styles.disabled]: disabled,
           [styles.focus]: focus,

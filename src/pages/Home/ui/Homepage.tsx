@@ -6,7 +6,7 @@ import styles from "./HomePage.module.scss";
 const HomePage = () => {
 
   return (
-    <div className={styles.pageWrapper}> 
+    <div className={styles["page-wrapper"]}> 
       <Header />
       <main className={styles.content}>1</main>
       

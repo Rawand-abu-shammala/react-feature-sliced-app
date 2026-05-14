@@ -13,8 +13,8 @@ export const Footer = () => {
 
         <div className={styles.links}>
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>{t("footer.about")}</h3>
-            <ul className={styles.linkList}>
+            <h3 className={styles["column-title"]}>{t("footer.about")}</h3>
+            <ul className={styles["link-list"]}>
               <li>
                 <Link className={styles.link} to={routePaths.home}>
                   {t("footer.aboutUs")}
@@ -34,8 +34,8 @@ export const Footer = () => {
           </div>
 
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>{t("footer.quickLinks")}</h3>
-            <ul className={styles.linkList}>
+            <h3 className={styles["column-title"]}>{t("footer.quickLinks")}</h3>
+            <ul className={styles["link-list"]}>
               <li>
                 <Link className={styles.link} to={routePaths.home}>
                   {t("footer.faqs")}
@@ -55,8 +55,8 @@ export const Footer = () => {
           </div>
 
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>{t("footer.helpSupport")}</h3>
-            <ul className={styles.linkList}>
+            <h3 className={styles["column-title"]}>{t("footer.helpSupport")}</h3>
+            <ul className={styles["link-list"]}>
               <li>
                 <Link className={styles.link} to={routePaths.home}>
                   {t("footer.termsOfService")}
@@ -75,8 +75,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>{t("footer.company")}</h3>
-            <ul className={styles.linkList}>
+            <h3 className={styles["column-title"]}>{t("footer.company")}</h3>
+            <ul className={styles["link-list"]}>
               <li>
                 <Link className={styles.link} to={routePaths.home}>
                   {t("footer.blog")}
@@ -90,8 +90,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>{t("footer.social")}</h3>
-            <ul className={styles.linkList}>
+            <h3 className={styles["column-title"]}>{t("footer.social")}</h3>
+            <ul className={styles["link-list"]}>
               <li>
                 <Link className={styles.link} to={routePaths.home}>
                   {t("footer.facebook")}

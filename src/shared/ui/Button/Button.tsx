@@ -45,7 +45,7 @@ export const Button = (props: ButtonProps) => {
         styles[theme],
         {
           [styles.disabled]: disabled,
-          [styles.fullWidth]: fullWidth,
+          [styles["full-width"]]: fullWidth,
           [styles.isLoading]: isLoading,
         }
       )}
