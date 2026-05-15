@@ -1,0 +1,31 @@
+.carousel {
+  margin: auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  padding-left: 16px;
+  position: relative;
+}
+
+.embla-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}

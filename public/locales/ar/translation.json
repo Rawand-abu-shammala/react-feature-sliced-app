@@ -1,7 +1,32 @@
 {
+  "carousel": {
+    "imageError": "خطأ",
+    "imageAlt": "بانر إعلاني"
+  },
+  "products": {
+    "viewAll": "عرض الكل",
+    "bestSellers": "الأكثر مبيعًا",
+    "trendingFavorites": "المنتجات الشائعة",
+    "unexpectedError": "حدث خطأ غير متوقع",
+    "tryAgain": "حاول مرة أخرى",
+    "noProducts": "لا توجد منتجات",
+    "itemsLeft": "متبقي {{count}} فقط",
+    "loadCategoriesError": "تعذر تحميل الفئات"
+  },
+  "firstOrderSection": {
+    "errorLoading": "خطأ في تحميل المنتجات",
+    "tryAgain": "حاول مرة أخرى",
+    "noProducts": "لا توجد منتجات متاحة",
+    "discountOffer": "خصم 10% على أول طلب لك",
+    "orderTitle": "اطلب مشترياتك الآن!",
+    "items": "منتجات",
+    "minutes": "دقائق",
+    "upToOffers": "حتى من العروض",
+    "orderNow": "اطلب الآن"
+  },
   "header": {
-    "cart": "سلة التسوق",
-    "searchBy": "البحث عن",
+    "cart": "السلة",
+    "searchBy": "ابحث عن",
     "login": "تسجيل الدخول",
     "logout": "تسجيل الخروج"
   },
@@ -13,14 +38,14 @@
     "quickLinks": "روابط سريعة",
     "faqs": "الأسئلة الشائعة",
     "recipes": "الوصفات",
-    "contactUs": "اتصل بنا",
+    "contactUs": "تواصل معنا",
     "helpSupport": "المساعدة والدعم",
-    "termsOfService": "شروط الاستخدام",
+    "termsOfService": "شروط الخدمة",
     "privacyPolicy": "سياسة الخصوصية",
     "security": "الأمان",
     "company": "الشركة",
     "blog": "المدونة",
-    "contact": "التواصل",
+    "contact": "اتصل بنا",
     "social": "وسائل التواصل",
     "facebook": "فيسبوك",
     "instagram": "إنستغرام",
@@ -32,13 +57,13 @@
   },
   "notFound": {
     "title": "الصفحة غير موجودة",
-    "description": "الصفحة التي تبحث عنها غير متوفرة. حاول مرة أخرى أو استخدم زر الرجوع أدناه.",
+    "description": "الصفحة التي تبحث عنها غير متاحة. حاول مرة أخرى أو استخدم زر الرجوع أدناه.",
     "goBack": "رجوع"
   },
   "pageError": {
     "title": "حدث خطأ ما",
-    "description": "نعتذر — حدث خطأ غير متوقع. يرجى تحديث الصفحة أو المحاولة مرة أخرى لاحقًا.",
-    "reload": "إعادة المحاولة"
+    "description": "نعتذر — حدث خطأ غير متوقع. يرجى تحديث الصفحة أو المحاولة لاحقًا.",
+    "reload": "حاول مرة أخرى"
   },
   "errors": {
     "CONTACT_REQUIRED": "يرجى إدخال البريد الإلكتروني أو رقم الهاتف",
@@ -46,8 +71,8 @@
     "USER_ALREADY_EXISTS": "المستخدم موجود بالفعل",
     "USER_ALREADY_VERIFIED": "تم التحقق من المستخدم بالفعل",
     "GOOGLE_USER_NO_VERIFICATION": "مستخدمو Google لا يحتاجون إلى التحقق",
-    "VERIFICATION_TOO_MANY_CODES": "تم طلب عدد كبير من الرموز. يرجى المحاولة لاحقًا.",
-    "GOOGLE_AUTH_FAILED": "فشل تسجيل الدخول باستخدام Google",
+    "VERIFICATION_TOO_MANY_CODES": "تم طلب عدد كبير جدًا من الرموز. يرجى المحاولة لاحقًا.",
+    "GOOGLE_AUTH_FAILED": "فشل تسجيل الدخول عبر Google",
     "GOOGLE_CODE_INVALID": "رمز Google غير صالح أو منتهي الصلاحية",
     "LOGIN_USE_GOOGLE": "هذا الحساب يستخدم تسجيل الدخول عبر Google. يرجى المتابعة باستخدام Google.",
     "ACCOUNT_NOT_VERIFIED": "يرجى التحقق من حسابك قبل تسجيل الدخول",
