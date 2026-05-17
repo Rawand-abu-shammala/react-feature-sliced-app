@@ -6,7 +6,7 @@
   "products": {
     "viewAll": "عرض الكل",
     "bestSellers": "الأكثر مبيعًا",
-    "trendingFavorites": "المنتجات الشائعة",
+    "trendingProducts": "المنتجات الرائجة",
     "unexpectedError": "حدث خطأ غير متوقع",
     "tryAgain": "حاول مرة أخرى",
     "noProducts": "لا توجد منتجات",

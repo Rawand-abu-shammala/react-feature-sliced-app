@@ -1,0 +1,43 @@
+.category-skeleton {
+  width: 120px;
+  height: 42px;
+  background-color: var(--gray-200);
+  border-radius: 24px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.error-text {
+  font: var(--font-base);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
