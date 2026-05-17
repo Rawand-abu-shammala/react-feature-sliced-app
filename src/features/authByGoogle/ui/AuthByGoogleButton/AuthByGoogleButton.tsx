@@ -10,7 +10,7 @@ export const AuthByGoogleButton = () => {
   return (
     <Button fullWidth theme="secondary" onClick={callAuthByGoogle}>
       <AppIcon Icon={GoogleIcon} />
-      {t("oauth.continueWith", { provider: "Google" })}
+      {t("Continue With Google", { provider: "Google" })}
     </Button>
   );
 };

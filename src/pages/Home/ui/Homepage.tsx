@@ -1,3 +1,4 @@
+import { BestSellingProducts } from "@/widgets/BestSellingProducts";
 import { Footer } from "@/widgets/Footer";
 import { Header } from "@/widgets/Header";
 
@@ -6,10 +7,11 @@ import { PromoBanners } from "./PromoBanners/PromoBanners";
 
 const HomePage = () => {
   return (
-    <div className={styles.pageWrapper}>
+    <div className={styles["page-wrapper"]}>
       <Header />
       <main className={styles.content}>
         <PromoBanners />
+        <BestSellingProducts />
       </main>
       <Footer />
     </div>

@@ -1,0 +1,21 @@
+.prices {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.price {
+  font: var(--font-l);
+  font-weight: 600;
+}
+
+.old-price {
+  color: var(--gray-600);
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.has-discount {
+  color: var(--green-500);
+}
