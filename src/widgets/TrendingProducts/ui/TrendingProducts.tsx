@@ -70,7 +70,7 @@ export const TrendingProducts = () => {
           <CarouselControls emblaApi={emblaApi} />
         </div>
       </div>
-      <div className={styles.tagsContainer}>
+      <div className={styles["tags-container"]}>
         <TagList
           tags={tags}
           isLoading={tagsIsFetching}
