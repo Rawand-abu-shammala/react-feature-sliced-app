@@ -5,7 +5,7 @@ import { passwordRequirements } from "@/features/register/config/passwordRequire
 import { selectRegisterEmail } from "@/features/register/model/selectors/selectRegisterEmail/selectRegisterEmail";
 import { selectRegisterIsLoading } from "@/features/register/model/selectors/selectRegisterIsLoading/selectRegisterIsLoading";
 import { selectRegisterPassword } from "@/features/register/model/selectors/selectRegisterPassword/selectRegisterPassword";
-import { selectRegisterPhone } from "@/features/register/model/selectors/selectRegisterPhone/selectRegisterPhone.ts";
+import { selectRegisterPhone } from "@/features/register/model/selectors/selectRegisterPhone/selectRegisterPhone";
 import { register } from "@/features/register/model/services/register";
 import { registerActions } from "@/features/register/model/slice/registerSlice";
 

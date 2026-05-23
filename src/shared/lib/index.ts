@@ -1,3 +1,5 @@
+import { useIntersectionObserver } from "@/shared/lib/hooks/useIntersectionObserver";
+
 import { classNames as cn } from "./classNames/classNames";
 import { DynamicModuleLoader } from "./DynamicModuleLoader/DynamicModuleLoader";
 import { formatCompactNumber } from "./formatCompactNumber/formatCompactNumber";
@@ -6,11 +8,12 @@ import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import type { DeepPartial } from "./redux/types";
 
 export {
-  cn,
-  useAppDispatch,
-  useAppSelector,
-  DynamicModuleLoader,
-  formatCompactNumber,
-  useToast,
+    cn,
+    useAppDispatch,
+    useAppSelector,
+    DynamicModuleLoader,
+    formatCompactNumber,
+    useToast,
+    useIntersectionObserver
 };
 export type { DeepPartial };

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { selectRegisterEmail } from "@/features/register/model/selectors/selectRegisterEmail/selectRegisterEmail";
 import { selectRegisterError } from "@/features/register/model/selectors/selectRegisterError/selectRegisterError";
 import { selectRegisterIsLoading } from "@/features/register/model/selectors/selectRegisterIsLoading/selectRegisterIsLoading";
-import { selectRegisterPhone } from "@/features/register/model/selectors/selectRegisterPhone/selectRegisterPhone.ts";
+import { selectRegisterPhone } from "@/features/register/model/selectors/selectRegisterPhone/selectRegisterPhone";
 import { resendCode } from "@/features/register/model/services/resendCode";
 import { verifyCode } from "@/features/register/model/services/verifyCode";
 

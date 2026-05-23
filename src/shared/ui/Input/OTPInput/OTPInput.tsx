@@ -7,11 +7,11 @@ import {
   type KeyboardEvent,
 } from "react";
 
-import { Input, type HTMLInputType } from "../Input";
+import { Input, type HTMLInputProps } from "../Input";
 
 import styles from "./OTPInput.module.scss";
 
-export interface OTPInputProps extends HTMLInputType {
+export interface OTPInputProps extends HTMLInputProps {
   length?: number;
   onComplete?: (otp: string) => void;
   onChange?: (otp: string) => void;

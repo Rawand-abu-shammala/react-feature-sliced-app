@@ -6,27 +6,52 @@
   "products": {
     "viewAll": "عرض الكل",
     "bestSellers": "الأكثر مبيعًا",
-    "trendingProducts": "المنتجات الرائجة",
-    "unexpectedError": "حدث خطأ غير متوقع",
-    "tryAgain": "حاول مرة أخرى",
+    "trendingFavorites": "المنتجات الرائجة",
+    "unexpectedError": "خطأ غير متوقع",
+    "tryAgain": "إعادة المحاولة",
     "noProducts": "لا توجد منتجات",
     "itemsLeft": "متبقي {{count}} فقط",
     "loadCategoriesError": "تعذر تحميل الفئات"
   },
   "firstOrderSection": {
-    "errorLoading": "خطأ في تحميل المنتجات",
-    "tryAgain": "حاول مرة أخرى",
+    "errorLoading": "خطأ أثناء تحميل المنتجات",
+    "tryAgain": "إعادة المحاولة",
     "noProducts": "لا توجد منتجات متاحة",
-    "discountOffer": "خصم 10% على أول طلب لك",
-    "orderTitle": "اطلب مشترياتك الآن!",
-    "items": "منتجات",
+    "discountOffer": "خصم 10% على طلبك الأول",
+    "orderTitle": "اطلب طعامك الآن!",
+    "items": "عناصر",
     "minutes": "دقائق",
-    "upToOffers": "حتى من العروض",
+    "upToOffers": "حتى عروض",
     "orderNow": "اطلب الآن"
   },
+  "manageAddress": {
+    "deleteConfirm": "هل تريد حقًا حذف هذا العنوان؟",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "failedToLoad": "تعذر تحميل العناوين",
+    "tryAgain": "إعادة المحاولة",
+    "noAddressesTitle": "لا توجد عناوين مضافة بعد",
+    "noAddressesDescription": "أضف عنوانك الأول للبدء بالتسوق!",
+    "addNewAddress": "إضافة عنوان جديد",
+    "addAddress": "إضافة عنوان",
+    "streetAddress": "عنوان الشارع",
+    "city": "المدينة",
+    "apartment": "الشقة",
+    "zipCode": "الرمز البريدي",
+    "update": "تحديث",
+    "save": "حفظ",
+    "loadingMap": "جاري تحميل الخريطة...",
+    "mode": {
+      "choose": "اختيار عنوان",
+      "add": "إضافة عنوان جديد",
+      "edit": "تعديل العنوان"
+    },
+    "signInPrompt": "يرجى تسجيل الدخول لإدارة عناوينك.",
+    "signIn": "تسجيل الدخول"
+  },
   "header": {
-    "cart": "السلة",
-    "searchBy": "ابحث عن",
+    "cart": "سلة التسوق",
+    "searchBy": "البحث حسب",
     "login": "تسجيل الدخول",
     "logout": "تسجيل الخروج"
   },
@@ -37,33 +62,35 @@
     "changelog": "سجل التغييرات",
     "quickLinks": "روابط سريعة",
     "faqs": "الأسئلة الشائعة",
-    "recipes": "الوصفات",
-    "contactUs": "تواصل معنا",
+    "recipes": "وصفات",
+    "contactUs": "اتصل بنا",
     "helpSupport": "المساعدة والدعم",
     "termsOfService": "شروط الخدمة",
     "privacyPolicy": "سياسة الخصوصية",
     "security": "الأمان",
     "company": "الشركة",
-    "blog": "المدونة",
-    "contact": "اتصل بنا",
-    "social": "وسائل التواصل",
+    "blog": "مدونة",
+    "contact": "تواصل",
+    "social": "التواصل الاجتماعي",
     "facebook": "فيسبوك",
     "instagram": "إنستغرام",
     "twitter": "تويتر",
     "copyright": "جميع الحقوق محفوظة © {{year}} {{company}}"
   },
+
   "pageLoader": {
     "loading": "جارٍ التحميل..."
   },
+
   "notFound": {
     "title": "الصفحة غير موجودة",
-    "description": "الصفحة التي تبحث عنها غير متاحة. حاول مرة أخرى أو استخدم زر الرجوع أدناه.",
+    "description": "الصفحة التي تبحث عنها غير متاحة. حاول مرة أخرى أو استخدم زر الرجوع بالأسفل.",
     "goBack": "رجوع"
   },
   "pageError": {
     "title": "حدث خطأ ما",
-    "description": "نعتذر — حدث خطأ غير متوقع. يرجى تحديث الصفحة أو المحاولة لاحقًا.",
-    "reload": "حاول مرة أخرى"
+    "description": "نأسف، حدث خطأ غير متوقع. يرجى تحديث الصفحة أو العودة لاحقًا.",
+    "reload": "إعادة المحاولة"
   },
   "errors": {
     "CONTACT_REQUIRED": "يرجى إدخال البريد الإلكتروني أو رقم الهاتف",
@@ -71,10 +98,10 @@
     "USER_ALREADY_EXISTS": "المستخدم موجود بالفعل",
     "USER_ALREADY_VERIFIED": "تم التحقق من المستخدم بالفعل",
     "GOOGLE_USER_NO_VERIFICATION": "مستخدمو Google لا يحتاجون إلى التحقق",
-    "VERIFICATION_TOO_MANY_CODES": "تم طلب عدد كبير جدًا من الرموز. يرجى المحاولة لاحقًا.",
+    "VERIFICATION_TOO_MANY_CODES": "تم طلب عدد كبير من الأكواد. يرجى المحاولة لاحقًا.",
     "GOOGLE_AUTH_FAILED": "فشل تسجيل الدخول عبر Google",
     "GOOGLE_CODE_INVALID": "رمز Google غير صالح أو منتهي الصلاحية",
-    "LOGIN_USE_GOOGLE": "هذا الحساب يستخدم تسجيل الدخول عبر Google. يرجى المتابعة باستخدام Google.",
+    "LOGIN_USE_GOOGLE": "هذا الحساب يستخدم تسجيل الدخول عبر Google. يرجى المتابعة عبر Google.",
     "ACCOUNT_NOT_VERIFIED": "يرجى التحقق من حسابك قبل تسجيل الدخول",
     "INVALID_CREDENTIALS": "بيانات تسجيل الدخول غير صحيحة",
     "REFRESH_TOKEN_MISSING": "رمز التحديث مفقود",
@@ -82,6 +109,6 @@
     "REFRESH_TOKEN_REVOKED": "تم إلغاء رمز التحديث",
     "REFRESH_TOKEN_EXPIRED": "انتهت صلاحية رمز التحديث",
     "REFRESH_TOKEN_MISMATCH": "رمز التحديث غير متطابق",
-    "CODE_REQUIRED": "الرمز مطلوب"
+    "CODE_REQUIRED": "الكود مطلوب"
   }
 }

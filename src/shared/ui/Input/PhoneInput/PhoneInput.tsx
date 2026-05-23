@@ -19,6 +19,7 @@ export const PhoneInput = (props: InputProps) => {
     error = false,
     ...rest
   } = props;
+
   const [focus, setFocus] = useState<boolean>(false);
 
   const handleFocus = () => {
@@ -46,7 +47,7 @@ export const PhoneInput = (props: InputProps) => {
         defaultCountry="us"
         forceDialCode
         disableCountryGuess
-        value={value}
+        value={typeof value === "number" ? String(value) : value}
         disabled={disabled}
         onChange={handleChange}
         onFocus={handleFocus}

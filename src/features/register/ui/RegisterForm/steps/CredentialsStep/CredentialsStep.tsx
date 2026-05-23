@@ -11,11 +11,11 @@ import { AuthMethod } from "@/shared/config";
 import { useAppDispatch, useAppSelector } from "@/shared/lib";
 import { AppIcon, Button, Input, PhoneInput, Tabs } from "@/shared/ui";
 
-import { selectRegisterEmail } from "../../../../model/selectors/selectRegisterEmail/selectRegisterEmail.ts";
-import { selectRegisterError } from "../../../../model/selectors/selectRegisterError/selectRegisterError.ts";
-import { selectRegisterIsLoading } from "../../../../model/selectors/selectRegisterIsLoading/selectRegisterIsLoading.ts";
-import { selectRegisterMethod } from "../../../../model/selectors/selectRegisterMethod/selectRegisterMethod.ts";
-import { selectRegisterPhone } from "../../../../model/selectors/selectRegisterPhone/selectRegisterPhone.ts";
+import { selectRegisterEmail } from "../../../../model/selectors/selectRegisterEmail/selectRegisterEmail";
+import { selectRegisterError } from "../../../../model/selectors/selectRegisterError/selectRegisterError";
+import { selectRegisterIsLoading } from "../../../../model/selectors/selectRegisterIsLoading/selectRegisterIsLoading";
+import { selectRegisterMethod } from "../../../../model/selectors/selectRegisterMethod/selectRegisterMethod";
+import { selectRegisterPhone } from "../../../../model/selectors/selectRegisterPhone/selectRegisterPhone";
 
 import styles from "./CredentialsStep.module.scss";
 
