@@ -5,7 +5,7 @@ import type { Tag } from "../../model/types/Tag";
 
 import styles from "./TagList.module.scss";
 
-interface TagListProps {
+export interface TagListProps {
   tags?: Tag[];
   isLoading: boolean;
   onTagChange?: (tagId: string) => void;

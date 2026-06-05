@@ -1,6 +1,6 @@
 import {t} from "i18next";
 
-import {UseDeleteConfirmationModal} from "@/features/manageAddress/lib/useDeleteConfirmationModal";
+import {UseDeleteConfirmationModal} from "@/features/manageAddress/model/services/useDeleteConfirmationModal.ts";
 
 import DeleteIcon from "@/shared/assets/icons/Delete.svg?react";
 import {cn} from "@/shared/lib";
@@ -37,16 +37,16 @@ export const DeleteConfirmationModal = (
                     onClick={handleDeleteModalOpen}
                     theme="ghost"
                     size="sm"
-                    className={cn(styles.action, styles.deleteAction)}
+                    className={cn(styles.action, styles["delete-action"])}
                 >
                     <AppIcon Icon={DeleteIcon}/>
                     {t("manageAddress.delete")}
                 </Button>
             </Modal.Trigger>
-            <Modal.Content className={styles.deleteModal}>
+            <Modal.Content className={styles["delete-modal"]}>
                 <Modal.Header>Delete Confirmation</Modal.Header>
                 <Modal.Body>Are you sure you want to delete this address ?</Modal.Body>
-                <Modal.Footer className={styles.deleteModalFooter}>
+                <Modal.Footer className={styles["delete-modal-footer"]}>
                     <Button theme="outline" onClick={handleDeleteModalClose}>
                         Cancel
                     </Button>

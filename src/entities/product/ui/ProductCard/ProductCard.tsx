@@ -11,7 +11,7 @@ import type {Product} from "../../model/types/Product";
 import styles from "./ProductCard.module.scss";
 import {ProductCardImage} from "./ProductCardImage/ProductCardImage";
 
-interface ProductCardProps {
+export interface ProductCardProps {
     product: Product;
 }
 

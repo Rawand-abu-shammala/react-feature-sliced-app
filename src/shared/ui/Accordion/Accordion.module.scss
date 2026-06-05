@@ -11,7 +11,7 @@
 
 .header {
   width: 100%;
-  padding: 12px 16px;
+  padding: 12px 0;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -22,7 +22,6 @@
   align-items: center;
   transition: background-color 0.2s ease;
 }
-
 
 .icon {
   transform: rotate(90deg);
@@ -47,13 +46,12 @@
 .content-inner {
   min-height: 0;
   overflow: hidden;
-  padding: 0 16px;
   transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
   opacity 0.25s ease;
   opacity: 0;
 }
 
 .content.open .content-inner {
-  padding: 16px;
+  padding: 8px 0;
   opacity: 1;
 }

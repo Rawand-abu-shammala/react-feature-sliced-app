@@ -1,24 +1,35 @@
 import type { Preview } from "@storybook/react-vite";
+import type {Preview} from "@storybook/react-vite";
+import {initialize, mswLoader} from 'msw-storybook-addon';
 
-import {
-  ThemeDecorator,
-  RouterDecorator,
-  LanguageDecorator,
-  StoreDecorator,
-} from "../src/shared/config/storybook";
+import {LanguageDecorator, RouterDecorator, StoreDecorator, ThemeDecorator} from "../src/shared/config/storybook";
 
 import "../src/app/styles/index.scss";
 
+initialize({
+    onUnhandledRequest: 'warn', // Bypass unhandled requests instead of warning
+    serviceWorker: {
+        url: '/mockServiceWorker.js',
+        options: {
+            // Don't intercept requests to these paths
+            scope: '/',
+        },
+    },
+});
+
 const preview: Preview = {
+  initialGlobals: {
+        backgrounds: {value: 'light'},
+    },
   globalTypes: {
     theme: {
       name: "Theme",
-      description: " App theme",
+      description: "App theme",
       toolbar: {
         icon: "circlehollow",
         items: [
-          { value: "blue-theme", title: "Blue Theme" },
-          { value: "pink-theme", title: "Pink Theme" },
+          {value: "blue-theme", title: "Blue Theme"},
+          {value: "pink-theme", title: "Pink Theme"},
         ],
         dynamicTitle: true,
       },
@@ -30,8 +41,8 @@ const preview: Preview = {
       toolbar: {
         icon: "globe",
         items: [
-          { value: "en", title: "English" },
-          { value: "de", title: "Deutsch" },
+          {value: "en", title: "English"},
+          {value: "de", title: "Deutsch"},
         ],
         dynamicTitle: true,
       },
@@ -39,6 +50,12 @@ const preview: Preview = {
     },
   },
   parameters: {
+    backgrounds: {
+            options: {
+                dark: {name: 'Dark', value: '#333'},
+                light: {name: 'Light', value: '#fff'},
+            },
+        },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -47,9 +64,6 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: "todo",
     },
   },
@@ -59,6 +73,7 @@ const preview: Preview = {
     LanguageDecorator,
     StoreDecorator,
   ],
+  loaders: [mswLoader],
 };
 
 export default preview;

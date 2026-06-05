@@ -1,7 +1,7 @@
-import type { ProductsApiResponse } from "@/entities/product";
-import type { ProductQuery } from "@/entities/product/model/types/Product";
+import type {ProductsApiResponse} from "@/entities/product";
+import type {ProductQuery} from "@/entities/product/model/types/Product.ts";
 
-import { baseAPI } from "@/shared/api";
+import {baseAPI} from "@/shared/api";
 
 
 export const productApi = baseAPI.injectEndpoints({
@@ -28,11 +28,12 @@ export const productApi = baseAPI.injectEndpoints({
                 },
             },
 
-            query: ({ queryArg, pageParam }) => ({
+            query: ({queryArg, pageParam}) => ({
                 url: '/products',
                 params: {
                     ...queryArg,
-                    page: pageParam
+                    page: pageParam,
+                    limit: queryArg.limit || 20
                 },
             }),
 
@@ -51,5 +52,5 @@ export const productApi = baseAPI.injectEndpoints({
 })
 
 
-export const { useGetInfiniteProductsInfiniteQuery: useGetInfiniteProducts, useGetProductsQuery: useGetProducts } =
+export const {useGetInfiniteProductsInfiniteQuery: useGetInfiniteProducts, useGetProductsQuery: useGetProducts} =
     productApi;

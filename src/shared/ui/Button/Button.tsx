@@ -1,8 +1,8 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type {ButtonHTMLAttributes, ReactNode} from "react";
 
-import { cn } from "@/shared/lib";
+import {cn} from "@/shared/lib";
 
-import { Spinner } from "../Spinner/Spinner";
+import {Spinner} from "../Spinner/Spinner";
 
 import styles from "./Button.module.scss";
 
@@ -50,7 +50,7 @@ export const Button = (props: ButtonProps) => {
         }
       )}
     >
-      {isLoading && <Spinner size="sm" theme="secondary" />}
+      {isLoading && <Spinner size="sm" theme={disabled ? 'primary' : 'secondary'}/>}
       {children}
     </button>
   );
