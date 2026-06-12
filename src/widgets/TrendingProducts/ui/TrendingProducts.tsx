@@ -2,7 +2,7 @@ import type {EmblaCarouselType} from "embla-carousel";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
-import {TrendingProductsSkeleton} from "@/widgets/TrendingProducts/ui/TrendingProductSkeleton";
+import {TrendingProductsSkeleton} from "@/widgets/TrendingProducts/ui/TrendingProductsSkeleton";
 
 import {ProductCard, ProductCardSkeleton} from "@/entities/product";
 import {useGetProducts} from "@/entities/product/api/productApi.ts";
@@ -11,7 +11,7 @@ import {selectUserCurrency} from "@/entities/user";
 
 import ArrowRightIcon from "@/shared/assets/icons/ArrowRight.svg?react";
 import {useAppSelector} from "@/shared/lib";
-import {AppIcon, Button, Carousel, CarouselControls, CarouselSkeleton} from "@/shared/ui";
+import {AppIcon, Button, Carousel, CarouselControls, CarouselSkeleton, EmptyState, ErrorState} from "@/shared/ui";
 
 import {useGetTrendingProductTagsQuery,} from "../api/trendingProductsApi";
 
@@ -71,18 +71,16 @@ export const TrendingProducts = () => {
 
     if (tagsIsError || productsIsError) {
         return (
-            <div className={styles["error-container"]}>
-                <p className={styles["error-text"]}>{t("products.unexpectedError")}</p>
-                <Button onClick={refetch}>{t("products.tryAgain")}</Button>
-            </div>
+            <ErrorState
+                message={t("products.unexpectedError")}
+                onRetry={refetch}
+            />
         );
     }
 
     if (!products || products.length === 0) {
         return (
-            <div className={styles["empty-container"]}>
-                <p className={styles["empty-text"]}>{t("products.noProducts")}</p>
-            </div>
+            <EmptyState title={t("products.noProducts")}/>
         );
     }
 

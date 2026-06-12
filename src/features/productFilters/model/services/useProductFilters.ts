@@ -6,8 +6,8 @@ import {useGetCategoryBySlugQuery} from "@/pages/Category/api/categoryPageApi";
 
 import {DEBOUNCE_DELAY} from "@/features/manageAddress/consts/defaults";
 import {DEFAULT_SORT_BY, DEFAULT_SORT_ORDER, URL_PARAMS} from "@/features/productFilters/consts/defaults";
-import {parsePriceRange} from "@/features/productFilters/lib/parsePriceRange";
-import {isValidSortBy, isValidSortOrder} from "@/features/productFilters/lib/sortOptionsHelpers";
+import {parsePriceRange} from "@/features/productFilters/lib/parsePriceRange/parsePriceRange";
+import {isValidSortBy, isValidSortOrder} from "@/features/productFilters/lib/sortOptionsHelpers/sortOptionsHelpers";
 import {validateFiltersFromURL} from "@/features/productFilters/lib/validateFiltersFromURL";
 import {
     selectActiveFilters,
@@ -18,16 +18,16 @@ import {
     selectSelectedCountries,
     selectSelectedPriceRange,
     selectSortSettings
-} from "@/features/productFilters/model/selectors/productFiltersSelectors";
-import {productFiltersActions} from "@/features/productFilters/model/slice/productFiltersSlice";
-import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema";
+} from "@/features/productFilters/model/selectors/productFiltersSelectors.ts";
+import {productFiltersActions} from "@/features/productFilters/model/slice/productFiltersSlice.ts";
+import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema.ts";
 
-import {useGetInfiniteProducts} from "@/entities/product/api/productApi";
-import type {PriceRangeType} from "@/entities/product/model/types/Product";
+import {useGetInfiniteProducts} from "@/entities/product/api/productApi.ts";
+import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
 import {selectUserCurrency} from "@/entities/user";
 
 import {clampOptionalRange, useAppDispatch, useAppSelector} from "@/shared/lib";
-import {useDebounce} from "@/shared/lib/hooks/useDebounce";
+import {useDebounce} from "@/shared/lib/hooks/useDebounce.ts";
 
 export const useProductFilters = () => {
     const {slug} = useParams<{ slug: string }>();
@@ -59,11 +59,7 @@ export const useProductFilters = () => {
         locale: i18n.language!
     });
 
-    const {
-        facets,
-        isLoading: isProductsLoading,
-        error: productsError
-    } = useGetInfiniteProducts({
+    const productsQuery = useGetInfiniteProducts({
         categoryId: category?.id,
         locale: i18n.language,
         currency,
@@ -77,6 +73,9 @@ export const useProductFilters = () => {
             error
         })
     });
+
+    const {facets, isLoading: isProductsLoading, error: productsError} = productsQuery;
+    const refetch = productsQuery.refetch;
 
     useEffect(() => {
         if (isInitialized || !isReducerReady || !facets) return;
@@ -243,6 +242,7 @@ export const useProductFilters = () => {
         handlePriceRangeChange,
         handleSortChange,
         handleReset,
-        handleSidebarClose
+        handleSidebarClose,
+        refetch
     };
 };

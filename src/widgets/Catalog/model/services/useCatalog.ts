@@ -3,11 +3,11 @@ import {useTranslation} from "react-i18next";
 import {useParams} from "react-router";
 import type {Grid as GridType} from "react-virtualized";
 
-import {useGetCategoryBySlugQuery} from "@/pages/Category/api/categoryPageApi.ts";
+import {useGetCategoryBySlugQuery} from "@/pages/Category/api/categoryPageApi";
 
-import {selectActiveFilters} from "@/features/productFilters/model/selectors/productFiltersSelectors.ts";
+import {selectActiveFilters} from "@/features/productFilters/model/selectors/productFiltersSelectors";
 
-import {useGetInfiniteProducts} from "@/entities/product/api/productApi.ts";
+import {useGetInfiniteProducts} from "@/entities/product/api/productApi";
 import {selectUserCurrency} from "@/entities/user";
 
 import {useAppSelector} from "@/shared/lib";
@@ -31,7 +31,8 @@ export const useCatalog = () => {
         error,
         isFetchingNextPage,
         hasNextPage,
-        fetchNextPage
+        fetchNextPage,
+        refetch
     } = useGetInfiniteProducts({
         categoryId: category?.id,
         locale: i18n.language,
@@ -75,6 +76,7 @@ export const useCatalog = () => {
         isFetchingNextPage,
         hasNextPage,
         handleLoadMore,
-        gridRef
+        gridRef,
+        refetch
     }
 }

@@ -1,4 +1,10 @@
 {
+  "common": {
+    "errorDefault": "حدث خطأ ما، يرجى المحاولة لاحقاً",
+    "tryAgain": "إعادة المحاولة",
+    "noData": "لا توجد بيانات متاحة"
+  },
+
   "carousel": {
     "imageError": "خطأ",
     "imageAlt": "بانر إعلاني"

@@ -1,3 +1,5 @@
+@use '../../../../../app/styles/animations';
+
 .notification {
   display: flex;
   align-items: flex-start;
@@ -9,18 +11,6 @@
   animation: slide-in 0.3s ease-out;
   background-color: var(--white);
   min-width: 320px;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 .icon {
@@ -41,12 +31,10 @@
 .success {
   border-left-color: var(--green-500);
   background-color: var(--green-50);
-
   .icon {
     path {
       fill: var(--green-500);
     }
-
     stroke: var(--green-500);
   }
 }
@@ -54,12 +42,10 @@
 .error {
   border-left-color: var(--red-500);
   background-color: var(--red-50);
-
   .icon {
     path {
       fill: var(--red-500);
     }
-
     stroke: var(--red-500);
   }
 }
@@ -67,12 +53,10 @@
 .warning {
   border-left-color: var(--yellow-500);
   background-color: var(--yellow-50);
-
   .icon {
     path {
       fill: var(--yellow-500);
     }
-
     stroke: var(--yellow-500);
   }
 }
@@ -80,21 +64,18 @@
 .info {
   border-left-color: var(--primary-color);
   background-color: var(--primary-color-light);
-
   .icon {
     path {
       fill: var(--primary-color);
     }
-
     stroke: var(--primary-color);
   }
 }
 
-.close-button {
+.closeButton {
   svg {
     stroke: var(--gray-500);
     transition: stroke 0.3s linear;
-
     &:hover {
       stroke: var(--black);
     }

@@ -1,10 +1,10 @@
 import type {Meta, StoryObj} from '@storybook/react-vite';
 
-import type {Product} from '../../model/types/Product';
+import {createMockProduct} from "@/entities/product/api/test/mockData.ts";
 
 import {ProductCard} from './ProductCard';
 
- const meta = {
+const meta = {
     title: 'entities/product/ProductCard',
     component: ProductCard,
     parameters: {
@@ -23,22 +23,8 @@ import {ProductCard} from './ProductCard';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const baseProduct: Product = {
-    id: '1',
-    name: 'Wireless Headphones',
-    description: 'skskskmsfmfmfm',
-    slug: 'headphones',
-    shortDescription: 'Premium sound quality',
-    price: 99.99,
-    stock: 15,
-    images: [
-        {
-            url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
-            alt: 'Wireless Headphones',
-            isMain: true,
-        },
-    ],
-};
+const baseProduct = createMockProduct({price: 100})
+
 
 export const Default: Story = {
     args: {

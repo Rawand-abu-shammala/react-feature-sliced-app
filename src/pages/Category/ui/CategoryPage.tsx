@@ -1,7 +1,7 @@
 import {useParams} from "react-router";
 
 import {useGetCategoryBreadcrumbsQuery, useGetCategoryBySlugQuery} from "@/pages/Category/api/categoryPageApi";
-import {useCategorySlugSync} from "@/pages/Category/lib/useCategorySlugSync";
+import {useCategorySlugSync} from "@/pages/Category/lib/useCategorySlugSync/useCategorySlugSync";
 
 import {CategoryNavigation} from "@/widgets/CategoryNavigation";
 import {Footer} from "@/widgets/Footer";
@@ -17,7 +17,7 @@ import {Catalog} from "@/entities/product";
 import type {SupportedLngsType} from "@/shared/config";
 import {DynamicModuleLoader} from "@/shared/lib";
 import {AppPage} from "@/shared/ui";
-import {Breadcrumbs} from "@/shared/ui/Breadcrumbs/Breadcrumbs";
+import {Breadcrumbs} from "@/shared/ui/Breadcrumbs/Breadcrumbs.tsx";
 
 import styles from "./CategoryPage.module.scss";
 

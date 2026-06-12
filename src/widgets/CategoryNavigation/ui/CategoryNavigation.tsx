@@ -1,11 +1,11 @@
 import {useTranslation} from "react-i18next";
 import {useParams} from "react-router";
 
-import {useGetCategoryNavigationQuery} from "@/widgets/CategoryNavigation/api/categoryNavigationApi.ts";
-import {CategoryNavigationGoBackItem} from "@/widgets/CategoryNavigation/ui/CategoryNavigationGoBackItem.tsx";
+import {useGetCategoryNavigationQuery} from "@/widgets/CategoryNavigation/api/categoryNavigationApi";
+import {CategoryNavigationGoBackItem} from "@/widgets/CategoryNavigation/ui/CategoryNavigationGoBackItem";
 
 import type {SupportedLngsType} from "@/shared/config";
-import {Button, Carousel, CarouselSkeleton} from "@/shared/ui";
+import {Carousel, CarouselSkeleton, ErrorState} from "@/shared/ui";
 
 import styles from "./CategoryNavigation.module.scss";
 import {CategoryNavigationItem} from "./CategoryNavigationItem";
@@ -29,7 +29,7 @@ export const CategoryNavigation = () => {
     if (isLoading) {
         return (
             <CarouselSkeleton
-                className={styles.categorySkeletonContainer}
+                className={styles["category-skeleton-container"]}
                 count={15}
                 ItemSkeletonComponent={<div className={styles["category-skeleton"]}/>}
             />
@@ -38,10 +38,10 @@ export const CategoryNavigation = () => {
 
     if (isError) {
         return (
-            <div className={styles["error-container"]}>
-                <p className={styles["error-text"]}>{t("products.loadCategoriesError")}</p>
-                <Button onClick={refetch}>{t("products.tryAgain")}</Button>
-            </div>
+            <ErrorState
+                message={t("products.loadCategoriesError")}
+                onRetry={refetch}
+            />
         );
     }
 
