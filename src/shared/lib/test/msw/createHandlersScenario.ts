@@ -1,13 +1,15 @@
-import type {HttpHandler} from "msw";
+import type {HttpHandler} from 'msw';
 
-import type {HandlerVariants} from "./createHandlers";
+import type {HandlerVariants} from "@/shared/lib/test/msw/createHandlers.ts";
+
 
 type ScenarioName = keyof HandlerVariants;
 
-export function createHandlersScenario<T extends Record<string, HandlerVariants>>(
+export function createHandlersScenario<T extends Record<string, HandlerVariants>
+>(
     scenarioName: ScenarioName,
     handlerSets: T,
-    overrides?: Partial<Record<keyof T, HttpHandler>>,
+    overrides?: Partial<Record<keyof T, HttpHandler>>
 ): HttpHandler[] {
     const handlers: HttpHandler[] = [];
 
@@ -26,9 +28,11 @@ export function createHandlersScenario<T extends Record<string, HandlerVariants>
     return handlers;
 }
 
+
 export function withOverrides(
     baseHandlers: HttpHandler[],
     ...overrides: HttpHandler[]
 ): HttpHandler[] {
     return [...baseHandlers, ...overrides];
 }
+

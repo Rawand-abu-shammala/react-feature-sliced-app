@@ -1,8 +1,8 @@
-import {delay, http, type HttpHandler, HttpResponse, type JsonBodyType} from "msw";
+import {delay, http, type HttpHandler, HttpResponse, type JsonBodyType} from 'msw';
 
 export interface HandlerConfig<TData extends JsonBodyType = JsonBodyType> {
     endpoint: string;
-    method?: "get" | "post" | "put" | "patch" | "delete";
+    method?: 'get' | 'post' | 'put' | 'patch' | 'delete';
     defaultData: TData | (() => TData);
     errorData?: {
         error: string;
@@ -19,20 +19,22 @@ export interface HandlerVariants {
 export type HandlerVariantName = keyof HandlerVariants;
 
 export function createHandlers<TData extends JsonBodyType = JsonBodyType>(
-    config: HandlerConfig<TData>,
+    config: HandlerConfig<TData>
 ): HandlerVariants {
     const {
         endpoint,
-        method = "get",
+        method = 'get',
         defaultData,
-        errorData = {error: "Request failed"},
+        errorData = {error: 'Request failed'},
         errorStatus = 500,
     } = config;
 
     const httpMethod = http[method];
 
     const resolveData = (): TData => {
-        return typeof defaultData === "function" ? (defaultData as () => TData)() : defaultData;
+        return typeof defaultData === 'function'
+            ? (defaultData as () => TData)()
+            : defaultData;
     };
 
     return {
@@ -41,7 +43,7 @@ export function createHandlers<TData extends JsonBodyType = JsonBodyType>(
         }),
 
         loading: httpMethod(endpoint, async () => {
-            await delay("infinite");
+            await delay('infinite');
             return HttpResponse.json(resolveData());
         }),
 
@@ -53,7 +55,7 @@ export function createHandlers<TData extends JsonBodyType = JsonBodyType>(
 
 export function extendHandlers<T extends Record<string, HttpHandler>>(
     baseHandlers: HandlerVariants,
-    customHandlers: T,
+    customHandlers: T
 ): HandlerVariants & T {
     return {
         ...baseHandlers,

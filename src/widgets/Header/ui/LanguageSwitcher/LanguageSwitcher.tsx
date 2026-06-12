@@ -8,7 +8,7 @@ export const LanguageSwitcher = () => {
     const currentLanguage = i18n.language as SupportedLngsType;
 
     const toggleLanguage = async () => {
-        const newLng = i18n.language === "en" ? "de" : "en";
+        const newLng = i18n.language === "en" ? "ar" : "en";
         await i18n.changeLanguage(newLng);
     };
     return (

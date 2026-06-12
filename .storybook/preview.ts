@@ -1,4 +1,3 @@
-import type { Preview } from "@storybook/react-vite";
 import type {Preview} from "@storybook/react-vite";
 import {initialize, mswLoader} from 'msw-storybook-addon';
 
@@ -42,7 +41,7 @@ const preview: Preview = {
         icon: "globe",
         items: [
           {value: "en", title: "English"},
-          {value: "de", title: "Deutsch"},
+          { value: "ar", title: "العربية" },
         ],
         dynamicTitle: true,
       },

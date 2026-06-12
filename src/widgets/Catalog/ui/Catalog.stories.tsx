@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react-vite';
 
-import {categoryHandlers} from "@/entities/category/lib/test/handlers";
-import {productsHandlers} from "@/entities/product/lib/test/handlers";
+import {categoryHandlers} from "@/entities/category/api/test/handlers";
+import {productsHandlers} from "@/entities/product/api/test/handlers";
 
 import {Catalog} from './Catalog';
 

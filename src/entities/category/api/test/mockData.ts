@@ -12,7 +12,7 @@ export const createMockCategory = createMockFactory<Category>({
     parentId: sequence('cat'),
     slugMap: (i) => ({
         en: categorySlugs[i % categorySlugs.length],
-        de: categorySlugs[i % categorySlugs.length],
+        ar: categorySlugs[i % categorySlugs.length],
     }),
 });
 
