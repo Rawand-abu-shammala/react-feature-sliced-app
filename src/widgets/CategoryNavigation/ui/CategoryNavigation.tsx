@@ -29,7 +29,7 @@ export const CategoryNavigation = () => {
     if (isLoading) {
         return (
             <CarouselSkeleton
-                className={styles["category-skeleton-container"]}
+                className={styles.categorySkeletonContainer}
                 count={15}
                 ItemSkeletonComponent={<div className={styles["category-skeleton"]}/>}
             />
