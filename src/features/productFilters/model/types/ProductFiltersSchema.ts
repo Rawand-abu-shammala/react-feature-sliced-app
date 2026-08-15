@@ -1,6 +1,6 @@
 import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
 
-export interface ProductFiltersSchema {
+export interface productFiltersSchema {
     filters: {
         priceRange: PriceRangeType
         countries: string[]
