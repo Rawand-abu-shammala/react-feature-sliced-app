@@ -1,7 +1,7 @@
 import {type MouseEvent, useState} from "react";
 
-import {useDeleteShippingAddressMutation} from "@/features/manageAddress/api/manageAddressApi.ts";
-import type {ShippingAddress} from "@/features/manageAddress/model/types/Address.ts";
+import {useDeleteShippingAddressMutation} from "@/features/manageAddress/api/manageAddressApi";
+import type {ShippingAddress} from "@/features/manageAddress/model/types/Address";
 
 import {useToast} from "@/shared/lib";
 

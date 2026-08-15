@@ -1,4 +1,4 @@
-import {COLUMN_GAP, COLUMN_WIDTH} from "@/widgets/Catalog/consts/defaults.ts";
+import {COLUMN_GAP, COLUMN_WIDTH} from "@/widgets/Catalog/consts/defaults";
 
 export const getColumnCount = (width: number) => {
     return Math.floor(width / (COLUMN_WIDTH + COLUMN_GAP)) || 1;

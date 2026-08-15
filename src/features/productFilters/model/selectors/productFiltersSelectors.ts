@@ -2,7 +2,7 @@ import {createSelector} from "@reduxjs/toolkit";
 
 import type {StateSchema} from "@/app/store";
 
-import {DEFAULT_SORT_BY, DEFAULT_SORT_ORDER} from "@/features/productFilters/consts/defaults.ts";
+import {DEFAULT_SORT_BY, DEFAULT_SORT_ORDER} from "@/features/productFilters/consts/defaults";
 
 
 export const selectProductFilters = (state: StateSchema) => state.productFilters;

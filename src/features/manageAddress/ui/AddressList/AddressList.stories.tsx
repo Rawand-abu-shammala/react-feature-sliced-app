@@ -1,8 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react-vite';
 
-import {listAddressHandlers} from "@/features/manageAddress/api/test/handlers.ts";
+import {listAddressHandlers} from "@/features/manageAddress/api/test/handlers";
 
-import {createHandlersScenario} from "@/shared/lib/test/msw/createHandlersScenario.ts";
+import {createHandlersScenario} from "@/shared/lib/test/msw/createHandlersScenario";
 
 import {AddressList} from './AddressList';
 

@@ -1,8 +1,8 @@
 import {Suspense} from "react";
 import {useTranslation} from "react-i18next";
 
-import {useManageAddress} from "@/features/manageAddress/model/services/useManageAddress.ts";
-import {DisplayManageAddress} from "@/features/manageAddress/ui/DisplayManageAddress.tsx";
+import {useManageAddress} from "@/features/manageAddress/model/services/useManageAddress";
+import {DisplayManageAddress} from "@/features/manageAddress/ui/DisplayManageAddress";
 
 import ArrowLeft from "@/shared/assets/icons/ArrowLeft.svg?react";
 import MapPinIcon from "@/shared/assets/icons/MapPin.svg?react";

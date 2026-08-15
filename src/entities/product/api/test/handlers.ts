@@ -1,9 +1,9 @@
 import {http, HttpResponse} from 'msw';
 
 import {API_URL} from '@/shared/config';
-import {createHandlers, extendHandlers} from "@/shared/lib/test/msw/createHandlers.ts";
+import {createHandlers, extendHandlers} from "@/shared/lib/test/msw/createHandlers";
 
-import {createMockProduct, emptyFacets, mockFacets, mockProducts} from './mockData.ts';
+import {createMockProduct, emptyFacets, mockFacets, mockProducts} from './mockData';
 
 const baseHandlers = createHandlers({
     endpoint: `${API_URL}/products`,

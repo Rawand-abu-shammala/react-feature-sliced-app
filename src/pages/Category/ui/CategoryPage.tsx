@@ -17,7 +17,7 @@ import {Catalog} from "@/entities/product";
 import type {SupportedLngsType} from "@/shared/config";
 import {DynamicModuleLoader} from "@/shared/lib";
 import {AppPage} from "@/shared/ui";
-import {Breadcrumbs} from "@/shared/ui/Breadcrumbs/Breadcrumbs.tsx";
+import {Breadcrumbs} from "@/shared/ui/Breadcrumbs/Breadcrumbs";
 
 import styles from "./CategoryPage.module.scss";
 

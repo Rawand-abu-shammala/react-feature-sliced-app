@@ -1,7 +1,7 @@
-import {mockCategories} from "@/entities/category/api/test/mockData.ts";
+import {mockCategories} from "@/entities/category/api/test/mockData";
 
 import {API_URL} from '@/shared/config';
-import {createHandlers} from "@/shared/lib/test/msw/createHandlers.ts";
+import {createHandlers} from "@/shared/lib/test/msw/createHandlers";
 
 
 export const categoryHandlers = createHandlers({

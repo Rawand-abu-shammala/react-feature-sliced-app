@@ -1,6 +1,6 @@
 import type {HttpHandler} from 'msw';
 
-import type {HandlerVariants} from "@/shared/lib/test/msw/createHandlers.ts";
+import type {HandlerVariants} from "@/shared/lib/test/msw/createHandlers";
 
 
 type ScenarioName = keyof HandlerVariants;

@@ -1,7 +1,7 @@
 import type {ReactNode} from "react";
 import {createPortal} from "react-dom";
 
-import {THEME_DECORATOR_CONTAINER_ID} from "@/shared/config/storybook/decorators/ThemeDecorator.tsx";
+import {THEME_DECORATOR_CONTAINER_ID} from "@/shared/config/storybook/decorators/ThemeDecorator";
 
 interface PortalProps {
     children: ReactNode;

@@ -1,5 +1,5 @@
 import type {ProductsApiResponse} from "@/entities/product";
-import type {ProductQuery} from "@/entities/product/model/types/Product.ts";
+import type {ProductQuery} from "@/entities/product/model/types/Product";
 
 import {baseAPI} from "@/shared/api";
 

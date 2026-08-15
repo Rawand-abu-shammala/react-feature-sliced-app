@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next";
 import {TrendingProductsSkeleton} from "@/widgets/TrendingProducts/ui/TrendingProductsSkeleton";
 
 import {ProductCard, ProductCardSkeleton} from "@/entities/product";
-import {useGetProducts} from "@/entities/product/api/productApi.ts";
+import {useGetProducts} from "@/entities/product/api/productApi";
 import {TagList} from "@/entities/tag";
 import {selectUserCurrency} from "@/entities/user";
 

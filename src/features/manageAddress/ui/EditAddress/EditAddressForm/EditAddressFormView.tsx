@@ -1,7 +1,7 @@
 import {type FormEvent} from "react";
 import {useTranslation} from "react-i18next";
 
-import type {AddressMode, AddressSearchResult} from "@/features/manageAddress/model/types/Address.ts";
+import type {AddressMode, AddressSearchResult} from "@/features/manageAddress/model/types/Address";
 
 import {Button, Input} from "@/shared/ui";
 

@@ -1,10 +1,10 @@
 import {generatePath} from "react-router";
 
-import type {BaseCategory, Category} from "@/entities/category/model/types/Category.ts";
+import type {BaseCategory, Category} from "@/entities/category/model/types/Category";
 
 import {baseAPI} from "@/shared/api";
 import {routePaths, type SupportedLngsType} from "@/shared/config";
-import type {BreadcrumbItem} from "@/shared/ui/Breadcrumbs/Breadcrumbs.tsx";
+import type {BreadcrumbItem} from "@/shared/ui/Breadcrumbs/Breadcrumbs";
 
 interface CategoryBreadcrumbsArgs {
     slug: string

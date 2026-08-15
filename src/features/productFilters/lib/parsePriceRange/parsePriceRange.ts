@@ -1,4 +1,4 @@
-import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
+import type {PriceRangeType} from "@/entities/product/model/types/Product";
 
 export const parsePriceRange = (minPrice: string | null, maxPrice: string | null): PriceRangeType | null => {
     const minNum = minPrice ? parseFloat(minPrice) : undefined;

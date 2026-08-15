@@ -1,8 +1,8 @@
 import type {CSSProperties, ReactNode} from "react";
 import type {GridCellProps} from "react-virtualized";
 
-import {COLUMN_GAP, COLUMN_WIDTH, ROW_GAP} from "@/widgets/Catalog/consts/defaults.ts";
-import type {CatalogItem} from "@/widgets/Catalog/ui/Catalog.tsx";
+import {COLUMN_GAP, COLUMN_WIDTH, ROW_GAP} from "@/widgets/Catalog/consts/defaults";
+import type {CatalogItem} from "@/widgets/Catalog/ui/Catalog";
 
 import {type Product, ProductCard, ProductCardSkeleton} from "@/entities/product";
 

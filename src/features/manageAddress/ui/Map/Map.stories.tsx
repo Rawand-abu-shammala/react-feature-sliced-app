@@ -3,10 +3,10 @@ import type {LatLngTuple} from "leaflet";
 
 import type {StateSchema} from "@/app/store";
 
-import {geocodeHandlers} from "@/features/manageAddress/api/test/handlers.ts";
+import {geocodeHandlers} from "@/features/manageAddress/api/test/handlers";
 import {manageAddressReducer} from "@/features/manageAddress/model/slice/addressSlice";
 
-import {createHandlersScenario} from "@/shared/lib/test/msw/createHandlersScenario.ts";
+import {createHandlersScenario} from "@/shared/lib/test/msw/createHandlersScenario";
 
 
 import {Map} from "./Map";

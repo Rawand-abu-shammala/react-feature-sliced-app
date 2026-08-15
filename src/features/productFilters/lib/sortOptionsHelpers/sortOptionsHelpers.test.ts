@@ -4,10 +4,10 @@ import {
     type SortOptionValue,
     VALID_SORT_BY_VALUES,
     VALID_SORT_ORDER_VALUES
-} from "@/features/productFilters/consts/sortOptions.ts";
-import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema.ts";
+} from "@/features/productFilters/consts/sortOptions";
+import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema";
 
-import {createSortValue, isValidSortBy, isValidSortOrder, parseSortValue} from './sortOptionsHelpers.ts';
+import {createSortValue, isValidSortBy, isValidSortOrder, parseSortValue} from './sortOptionsHelpers';
 
 describe('createSortValue', () => {
     it('should create sort value from sortBy and sortOrder', () => {

@@ -1,12 +1,12 @@
 import {createSlice, type PayloadAction} from "@reduxjs/toolkit";
 
-import {DEFAULT_SORT_BY, DEFAULT_SORT_ORDER} from "@/features/productFilters/consts/defaults.ts";
+import {DEFAULT_SORT_BY, DEFAULT_SORT_ORDER} from "@/features/productFilters/consts/defaults";
 
-import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
+import type {PriceRangeType} from "@/entities/product/model/types/Product";
 
-import type {OrderType, ProductFiltersSchema, SortType} from "../types/productFiltersSchema";
+import type {OrderType, productFiltersSchema, SortType} from "../types/productFiltersSchema";
 
-export const initialState: ProductFiltersSchema = {
+export const initialState: productFiltersSchema = {
     filters: {
         brands: [],
         countries: [],

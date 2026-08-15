@@ -1,12 +1,12 @@
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router";
 
-import {useGetDefaultShippingAddressQuery} from "@/features/manageAddress/api/manageAddressApi.ts";
-import {ADDRESS_MODE_TITLES} from "@/features/manageAddress/consts/defaults.ts";
+import {useGetDefaultShippingAddressQuery} from "@/features/manageAddress/api/manageAddressApi";
+import {ADDRESS_MODE_TITLES} from "@/features/manageAddress/consts/defaults";
 import {
     selectManageAddressMode
-} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode.tsx";
-import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice.ts";
+} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode";
+import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice";
 
 import {selectUserData} from "@/entities/user";
 

@@ -1,9 +1,10 @@
+// import type { InternalAxiosRequestConfig } from 'axios';
 import { httpClient } from '@/shared/api';
 import { mockProducts, mockFacets } from '@/entities/product/api/test/mockData';
 import { mockCategoryNavigation } from '@/widgets/CategoryNavigation/api/test/mockData';
-import { mockCategories } from '@/entities/category/api/test/mockData.ts';
-import { mockTags } from '@/entities/tag/api/test/mockData.ts';
-import { mockBanners } from '@/widgets/PromoCarousel/api/test/mockData.ts';
+import { mockCategories } from '@/entities/category/api/test/mockData';
+import { mockTags } from '@/entities/tag/api/test/mockData';
+import { mockBanners } from '@/widgets/PromoCarousel/api/test/mockData';
 
 const jsonResponse = (data: unknown, status = 200) => {
     return new Response(JSON.stringify(data), {
@@ -33,6 +34,7 @@ const buildResponseData = async (url: URL, method: string) => {
 
     if (method === 'GET' && matchPath(pathname, /^\/categories\/slug\/.*$/)) {
         const slug = pathname.split('/').pop();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const category = mockCategories.find((c: any) => c.slug === slug) || mockCategories[0];
         return { data: category };
     }
@@ -95,9 +97,9 @@ export const setupDevMocking = () => {
 
         return originalFetch(input, init);
     };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
     const originalAdapter = httpClient.defaults.adapter as any;
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
     httpClient.defaults.adapter = async (config: any) => {
         const url = new URL(config.url ?? '', window.location.origin);
         const responseData = await buildResponseData(url, config.method?.toUpperCase() || 'GET');

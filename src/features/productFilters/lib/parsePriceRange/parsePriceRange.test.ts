@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {parsePriceRange} from './parsePriceRange.ts';
+import {parsePriceRange} from './parsePriceRange';
 
 describe('parsePriceRange', () => {
     it('should parse valid min and max prices', () => {

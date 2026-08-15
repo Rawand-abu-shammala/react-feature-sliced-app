@@ -6,41 +6,41 @@ import {
     useCreateShippingAddressMutation,
     useEditShippingAddressMutation,
     useSearchAddressesQuery
-} from "@/features/manageAddress/api/manageAddressApi.ts";
+} from "@/features/manageAddress/api/manageAddressApi";
 import {
     BLUR_DELAY,
     DEBOUNCE_DELAY,
     MIN_CITY_QUERY_LENGTH,
     MIN_STREET_QUERY_LENGTH
-} from "@/features/manageAddress/consts/defaults.ts";
-import {buildStreetSearchQuery} from "@/features/manageAddress/lib/formatters.ts";
-import {validateForm} from "@/features/manageAddress/lib/validateForm.ts";
+} from "@/features/manageAddress/consts/defaults";
+import {buildStreetSearchQuery} from "@/features/manageAddress/lib/formatters";
+import {validateForm} from "@/features/manageAddress/lib/validateForm";
 import {
     selectManageAddressCity
-} from "@/features/manageAddress/model/selectors/selectManageAddressCity/selectManageAddressCity.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressCity/selectManageAddressCity";
 import {
     selectManageAddressId
-} from "@/features/manageAddress/model/selectors/selectManageAddressId/selectManageAddressId.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressId/selectManageAddressId";
 import {
     selectManageAddressLocation
-} from "@/features/manageAddress/model/selectors/selectManageAddressLocation/selectManageAddressLocation.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressLocation/selectManageAddressLocation";
 import {
     selectManageAddressMode
-} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode";
 import {
     selectManageAddressNumberOfApartment
-} from "@/features/manageAddress/model/selectors/selectManageAddressNumberOfApartment/selectManageAddressNumberOfApartment.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressNumberOfApartment/selectManageAddressNumberOfApartment";
 import {
     selectManageAddressStreetAddress
-} from "@/features/manageAddress/model/selectors/selectManageAddressStreetAddress/selectManageAddressStreetAddress.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressStreetAddress/selectManageAddressStreetAddress";
 import {
     selectManageAddressZipCode
-} from "@/features/manageAddress/model/selectors/selectManageAddressZipCode/selectManageAddressZipCode.tsx";
-import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice.ts";
-import type {AddressSearchResult} from "@/features/manageAddress/model/types/Address.ts";
+} from "@/features/manageAddress/model/selectors/selectManageAddressZipCode/selectManageAddressZipCode";
+import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice";
+import type {AddressSearchResult} from "@/features/manageAddress/model/types/Address";
 
 import {useAppDispatch, useAppSelector, useToast} from "@/shared/lib";
-import {useDebounce} from "@/shared/lib/hooks/useDebounce.ts";
+import {useDebounce} from "@/shared/lib/hooks/useDebounce";
 
 export const useEditAddressForm = () => {
     const dispatch = useAppDispatch();

@@ -1,8 +1,8 @@
 import type {MouseEvent} from "react";
 
-import {useSetDefaultShippingAddressMutation} from "@/features/manageAddress/api/manageAddressApi.ts";
-import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice.ts";
-import type {ShippingAddress} from "@/features/manageAddress/model/types/Address.ts";
+import {useSetDefaultShippingAddressMutation} from "@/features/manageAddress/api/manageAddressApi";
+import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice";
+import type {ShippingAddress} from "@/features/manageAddress/model/types/Address";
 
 import {useAppDispatch} from "@/shared/lib";
 

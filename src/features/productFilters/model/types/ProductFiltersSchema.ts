@@ -1,4 +1,4 @@
-import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
+import type {PriceRangeType} from "@/entities/product/model/types/Product";
 
 export interface productFiltersSchema {
     filters: {

@@ -2,22 +2,22 @@ import type {LatLngTuple} from "leaflet";
 import {useCallback, useEffect, useMemo} from "react";
 import {useTranslation} from "react-i18next";
 
-import {useGetReverseGeocodeQuery} from "@/features/manageAddress/api/manageAddressApi.ts";
-import {MAP_CONFIG} from "@/features/manageAddress/consts/defaults.ts";
-import {formatStreetAddress} from "@/features/manageAddress/lib/formatters.ts";
+import {useGetReverseGeocodeQuery} from "@/features/manageAddress/api/manageAddressApi";
+import {MAP_CONFIG} from "@/features/manageAddress/consts/defaults";
+import {formatStreetAddress} from "@/features/manageAddress/lib/formatters";
 import {
     selectManageAddressLocation
-} from "@/features/manageAddress/model/selectors/selectManageAddressLocation/selectManageAddressLocation.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressLocation/selectManageAddressLocation";
 import {
     selectManageAddressMode
-} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode.tsx";
+} from "@/features/manageAddress/model/selectors/selectManageAddressMode/selectManageAddressMode";
 import {
     selectManageAddressNumberOfApartment
-} from "@/features/manageAddress/model/selectors/selectManageAddressNumberOfApartment/selectManageAddressNumberOfApartment.tsx";
-import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice.ts";
+} from "@/features/manageAddress/model/selectors/selectManageAddressNumberOfApartment/selectManageAddressNumberOfApartment";
+import {manageAddressActions} from "@/features/manageAddress/model/slice/addressSlice";
 
 import {useAppDispatch, useAppSelector} from "@/shared/lib";
-import {useUserLocation} from "@/shared/lib/hooks/useUserLocation.ts";
+import {useUserLocation} from "@/shared/lib/hooks/useUserLocation";
 
 
 export const useMap = () => {

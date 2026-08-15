@@ -18,16 +18,16 @@ import {
     selectSelectedCountries,
     selectSelectedPriceRange,
     selectSortSettings
-} from "@/features/productFilters/model/selectors/productFiltersSelectors.ts";
-import {productFiltersActions} from "@/features/productFilters/model/slice/productFiltersSlice.ts";
-import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema.ts";
+} from "@/features/productFilters/model/selectors/productFiltersSelectors";
+import {productFiltersActions} from "@/features/productFilters/model/slice/productFiltersSlice";
+import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema";
 
-import {useGetInfiniteProducts} from "@/entities/product/api/productApi.ts";
-import type {PriceRangeType} from "@/entities/product/model/types/Product.ts";
+import {useGetInfiniteProducts} from "@/entities/product/api/productApi";
+import type {PriceRangeType} from "@/entities/product/model/types/Product";
 import {selectUserCurrency} from "@/entities/user";
 
 import {clampOptionalRange, useAppDispatch, useAppSelector} from "@/shared/lib";
-import {useDebounce} from "@/shared/lib/hooks/useDebounce.ts";
+import {useDebounce} from "@/shared/lib/hooks/useDebounce";
 
 export const useProductFilters = () => {
     const {slug} = useParams<{ slug: string }>();

@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {clampOptionalRange, clampRange, clampValue} from './clampRange.ts';
+import {clampOptionalRange, clampRange, clampValue} from './clampRange';
 
 describe('clampValue', () => {
     it('should return value when within range', () => {

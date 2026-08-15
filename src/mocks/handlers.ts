@@ -2,9 +2,9 @@ import { http, HttpResponse } from 'msw';
 
 import { mockProducts, mockFacets } from '@/entities/product/api/test/mockData';
 import { mockCategoryNavigation } from '@/widgets/CategoryNavigation/api/test/mockData';
-import { mockCategories } from '@/entities/category/api/test/mockData.ts';
-import { mockTags } from '@/entities/tag/api/test/mockData.ts';
-import { mockBanners } from '@/widgets/PromoCarousel/api/test/mockData.ts';
+import { mockCategories } from '@/entities/category/api/test/mockData';
+import { mockTags } from '@/entities/tag/api/test/mockData';
+import { mockBanners } from '@/widgets/PromoCarousel/api/test/mockData';
 import { API_URL } from '@/shared/config';
 
 export const handlers = [
@@ -23,6 +23,7 @@ export const handlers = [
 
     http.get(`${API_URL}/categories/slug/:slug`, ({ params }) => {
         const slug = String(params.slug ?? '');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const category = mockCategories.find((c: any) => c.slug === slug) || mockCategories[0];
         return HttpResponse.json(category);
     }),

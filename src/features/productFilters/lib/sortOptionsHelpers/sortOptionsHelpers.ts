@@ -2,8 +2,8 @@ import {
     type SortOptionValue,
     VALID_SORT_BY_VALUES,
     VALID_SORT_ORDER_VALUES
-} from "@/features/productFilters/consts/sortOptions.ts";
-import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema.ts";
+} from "@/features/productFilters/consts/sortOptions";
+import type {OrderType, SortType} from "@/features/productFilters/model/types/productFiltersSchema";
 
 export const createSortValue = (sortBy: SortType, sortOrder: OrderType): SortOptionValue => {
     return `${sortBy}-${sortOrder}`;
