@@ -5,7 +5,7 @@ import type {ToastSchema} from "@/app/providers/toast/model/types/toast";
 import type {AuthByGoogleSchema} from "@/features/authByGoogle/model/types/authByGoogle";
 import type {LoginFormSchema} from "@/features/login";
 import type {ManageAddressSchema} from "@/features/manageAddress/model/types/Address";
-import type {ProductFiltersSchema} from "@/features/productFilters";
+import type {productFiltersSchema} from "@/features/productFilters";
 import type {RegisterFormSchema} from "@/features/register";
 
 import type {UserSchema} from "@/entities/user";
@@ -22,7 +22,7 @@ export interface StateSchema {
     loginForm?: LoginFormSchema;
     registerForm?: RegisterFormSchema;
     manageAddress?: ManageAddressSchema;
-    productFilters?: ProductFiltersSchema
+    productFilters?: productFiltersSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
