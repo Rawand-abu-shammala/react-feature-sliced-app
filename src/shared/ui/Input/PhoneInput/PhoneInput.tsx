@@ -17,6 +17,7 @@ export const PhoneInput = (props: InputProps) => {
     rounded = false,
     disabled = false,
     error = false,
+    onDragEnd,
     ...rest
   } = props;
 

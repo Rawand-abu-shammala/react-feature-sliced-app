@@ -17,11 +17,13 @@ export const FirstOrderSection = () => {
   const currency = useAppSelector(selectUserCurrency);
 
   const {
-    data: products,
+    data,
     isFetching,
     isError,
     refetch,
   } = useGetFirstOrderProductsQuery({ locale: i18n.language, currency });
+
+  const products = data ?? [];
 
   const handleRetry = () => {
     refetch();
@@ -61,7 +63,7 @@ export const FirstOrderSection = () => {
       );
     }
 
-    return products?.map((product) => (
+    return products.map((product) => (
       <ProductCard product={product} key={product.id} />
     ));
   };

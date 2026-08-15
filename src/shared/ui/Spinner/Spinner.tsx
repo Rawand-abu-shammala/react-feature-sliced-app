@@ -5,7 +5,7 @@ import styles from "./Spinner.module.scss";
 type SpinnerSize = "lg" | "md" | "sm";
 type SpinnerTheme = "primary" | "secondary";
 
-interface SpinnerProps {
+export interface SpinnerProps {
     size?: SpinnerSize;
     theme?: SpinnerTheme;
     'data-testid'?: string

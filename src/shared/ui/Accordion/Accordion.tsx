@@ -37,7 +37,7 @@ const useAccordionItem = () => {
     return value;
 };
 
-interface AccordionProps {
+export interface AccordionProps {
     children: ReactNode;
     defaultValue?: string[];
     className?: string
@@ -74,7 +74,7 @@ export const Accordion: FC<AccordionProps> & {
     );
 };
 
-interface AccordionItemProps {
+export interface AccordionItemProps {
     value: string;
     children: ReactNode;
     className?: string
@@ -90,7 +90,7 @@ const AccordionItem: FC<AccordionItemProps> = ({value, children, className}) => 
     );
 };
 
-interface AccordionHeaderProps {
+export interface AccordionHeaderProps {
     children: ReactNode;
     className?: string
 
@@ -121,7 +121,7 @@ const AccordionHeader: FC<AccordionHeaderProps> = ({children, className}) => {
     );
 };
 
-interface AccordionContentProps {
+export interface AccordionContentProps {
     children: ReactNode;
     className?: string
 }

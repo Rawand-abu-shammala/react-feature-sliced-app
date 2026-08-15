@@ -8,18 +8,24 @@ interface ProductImage {
 
 export interface Product {
     id: string;
+
     name: string;
+    nameAr: string;
+
     description: string;
+    descriptionAr: string;
+
     shortDescription: string;
+    shortDescriptionAr: string;
+
     slug: string;
     price: number;
     oldPrice?: number;
     stock: number;
     images: ProductImage[];
-    country?: string
-    brand?: string
+    country?: string;
+    brand?: string;
 }
-
 export interface ProductFacets {
     brands: FacetItemType[];
     countries: FacetItemType[];

@@ -23,7 +23,7 @@ type FactoryDefinition<T> = {
     [K in keyof T]: FactoryField<T[K]>;
 };
 
-interface MockFactory<T> {
+export interface MockFactory<T> {
     createList: (count: number, overrides?: (index: number) => Partial<T>) => T[];
 
     (overrides?: Partial<T>): T;
@@ -56,7 +56,7 @@ export function createMockFactory<T extends object>(
     };
 
     factory.createList = (count: number, overrides?: (index: number) => Partial<T>) => {
-        return Array.from({length: count}, (_, i) => {
+        return Array.from({ length: count }, (_, i) => {
             const itemOverrides = overrides ? overrides(i) : undefined;
             return factory(itemOverrides);
         });

@@ -18,32 +18,55 @@ export interface ProductCardProps {
 export const ProductCard = ({product}: ProductCardProps) => {
     const {i18n, t} = useTranslation();
     const currency = useAppSelector(selectUserCurrency);
+
     const img = product.images?.find((img) => img.isMain);
+
+    const isArabic = i18n.language === "ar";
+
+    const productName = isArabic
+        ? product.nameAr
+        : product.name;
+
+    const productShortDescription = isArabic
+        ? product.shortDescriptionAr
+        : product.shortDescription;
+
     return (
         <div className={styles.card} data-testid={`product-card-${product.id}`}>
             <div className={styles["img-container"]}>
                 <ProductCardImage
                     src={img?.url}
-                    alt={img?.alt || product.name}
+                    alt={img?.alt || productName}
                     className={styles.img}
                 />
+
                 <Button size="md" className={styles.button} form="circle">
                     <AppIcon Icon={AddIcon} size={24}/>
                 </Button>
             </div>
+
             <div>
-                <h5 className={styles.title}>{product.name} </h5>
-                <p className={styles.subtitle}>{product.shortDescription}</p>
+                <h5 className={styles.title}>
+                    {productName}
+                </h5>
+
+                <p className={styles.subtitle}>
+                    {productShortDescription}
+                </p>
+
                 <Price
                     currency={currency}
                     language={i18n.language}
                     price={product.price}
                     oldPrice={product.oldPrice}
                 />
+
                 <div className={styles.metadata}>
                     {product.stock <= 10 && (
                         <p className={styles["amount-left"]}>
-                            {t("products.itemsLeft", {count: product.stock})}
+                            {t("products.itemsLeft", {
+                                count: product.stock
+                            })}
                         </p>
                     )}
                 </div>

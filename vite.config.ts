@@ -3,7 +3,6 @@
 import { defineConfig } from "vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
-import tsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
 
 import path from "node:path";
@@ -19,8 +18,6 @@ const dirname =
 
 export default defineConfig({
   plugins: [
-    tsconfigPaths(),
-
     svgr(),
 
     react(),
@@ -29,6 +26,10 @@ export default defineConfig({
       presets: [reactCompilerPreset()],
     }),
   ],
+
+  resolve: {
+    tsconfigPaths: true,
+  },
 
   test: {
     projects: [
