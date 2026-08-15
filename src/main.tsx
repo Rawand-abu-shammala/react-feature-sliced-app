@@ -15,12 +15,15 @@ import "@/shared/config/i18n/i18n";
 import "@/app/styles/index.scss";
 
 async function bootstrap() {
-  if (import.meta.env.DEV) {
+  // Enable MSW mocking for the client environment
+  if (import.meta.env.VITE_PROJECT_ENV === "client") {
     try {
       const { setupDevMocking } = await import("./mocks/devMocking");
+
       setupDevMocking();
+
       // eslint-disable-next-line no-console
-      console.info('Dev mocking enabled (fetch + axios interceptors)');
+      console.info("Dev mocking enabled");
     } catch (mockError) {
       // eslint-disable-next-line no-console
       console.warn("Dev mocking failed:", mockError);
@@ -28,13 +31,20 @@ async function bootstrap() {
 
     try {
       const { worker } = await import("./mocks/browser");
-      await worker.start({ serviceWorker: { url: "/mockServiceWorker.js" }, onUnhandledRequest: 'bypass' });
+
+      await worker.start({
+        serviceWorker: {
+          url: "/mockServiceWorker.js",
+        },
+        onUnhandledRequest: "bypass",
+      });
+
       // eslint-disable-next-line no-console
-      console.info('MSW worker started');
-    } catch (e) {
-      // Do not block app start if worker fails to load
+      console.info("MSW worker started");
+    } catch (error) {
+      // Do not block app start if MSW fails
       // eslint-disable-next-line no-console
-      console.warn("MSW worker failed to start:", e);
+      console.warn("MSW worker failed to start:", error);
     }
   }
 

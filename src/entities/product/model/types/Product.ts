@@ -1,4 +1,4 @@
-import type {CurrencyType} from "@/shared/config";
+import type { CurrencyType } from "@/shared/config";
 
 interface ProductImage {
     url: string;
@@ -22,10 +22,13 @@ export interface Product {
     price: number;
     oldPrice?: number;
     stock: number;
+
     images: ProductImage[];
+
     country?: string;
     brand?: string;
 }
+
 export interface ProductFacets {
     brands: FacetItemType[];
     countries: FacetItemType[];
@@ -35,24 +38,32 @@ export interface ProductFacets {
 export interface ProductsApiResponse {
     products: Product[];
     total: number;
-    hasMore: boolean
+    hasMore: boolean;
     facets: ProductFacets;
 }
 
 export interface ProductQuery {
-    search?: string
-    categorySlug?: string
-    categoryId?: string
-    tagId?: string
-    minPrice?: number
-    maxPrice?: number
+    search?: string;
+    categorySlug?: string;
+    categoryId?: string;
+    tagId?: string;
+    minPrice?: number;
+    maxPrice?: number;
     brands?: string[];
     countries?: string[];
-    inStock?: boolean
-    limit?: number
-    locale?: string
-    currency?: CurrencyType
+    inStock?: boolean;
+    limit?: number;
+    locale?: string;
+    currency?: CurrencyType;
 }
 
-export type FacetItemType = { label?: string, value: string, count: number }
-export type PriceRangeType = { min?: number, max?: number }
+export type FacetItemType = {
+    label?: string;
+    value: string;
+    count: number;
+};
+
+export type PriceRangeType = {
+    min?: number;
+    max?: number;
+};

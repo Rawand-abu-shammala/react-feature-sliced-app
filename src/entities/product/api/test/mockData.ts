@@ -1,6 +1,13 @@
-import { createMockFactory, random, sequence } from "@/shared/lib/test/createMockFactories";
+import {
+    createMockFactory,
+    random,
+    sequence,
+} from "@/shared/lib/test/createMockFactories";
 
-import type { Product, ProductFacets } from "../../model/types/Product";
+import type {
+    Product,
+    ProductFacets,
+} from "../../model/types/Product";
 
 const productNames = [
     "Organic Bananas",
@@ -88,24 +95,20 @@ const productImages = [
 export const createMockProduct = createMockFactory<Product>({
     id: sequence("prod"),
 
-    // English product name
-    name: (i) => productNames[i % productNames.length],
+    name: (i) =>
+        productNames[i % productNames.length],
 
-    // Arabic product name
-    nameAr: (i) => productNamesAr[i % productNamesAr.length],
+    nameAr: (i) =>
+        productNamesAr[i % productNamesAr.length],
 
-    // English description
     description: (i) =>
         productDescriptions[i % productDescriptions.length],
 
-    // Arabic description
     descriptionAr: (i) =>
         productDescriptionsAr[i % productDescriptionsAr.length],
 
-    // English short description
     shortDescription: "Fresh quality groceries",
 
-    // Arabic short description
     shortDescriptionAr: "بقالة طازجة وعالية الجودة",
 
     slug: (i) =>
@@ -113,9 +116,11 @@ export const createMockProduct = createMockFactory<Product>({
             .toLowerCase()
             .replace(/\s+/g, "-"),
 
-    stock: () => random.int(0, 200),
+    stock: () =>
+        random.int(0, 200),
 
-    price: () => random.int(1, 50),
+    price: () =>
+        random.int(1, 50),
 
     images: (i) => [
         {
@@ -224,4 +229,3 @@ export const emptyFacets: ProductFacets = {
         max: 0,
     },
 };
-
