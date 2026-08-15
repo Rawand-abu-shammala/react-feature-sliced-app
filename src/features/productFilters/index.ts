@@ -3,7 +3,7 @@ import {
     productFiltersReducer
 } from "@/features/productFilters/model/slice/productFiltersSlice";
 
-import type { ProductFiltersSchema } from './model/types/productFiltersSchema'
+import type { productFiltersSchema } from './model/types/productFiltersSchema'
 
 
 export {
@@ -12,5 +12,5 @@ export {
 }
 
 export type {
-    ProductFiltersSchema
+    productFiltersSchema
 }
