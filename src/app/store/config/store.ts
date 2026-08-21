@@ -10,6 +10,7 @@ import { toastReducer } from "@/app/providers/toast/model/slice/toastSlice";
 import { authByGoogleReducer } from "@/features/authByGoogle";
 
 import { userReducer } from "@/entities/user";
+import {cartReducer} from "@/entities/cart";
 
 import { baseAPI } from "@/shared/api";
 import type { DeepPartial } from "@/shared/lib";
@@ -23,6 +24,7 @@ export const createStore = (
 ): ReduxStoreWithManager => {
   const rootReducer: ReducersMapObject<StateSchema> = {
     user: userReducer,
+    cart: cartReducer,
     authByGoogle: authByGoogleReducer,
     toast: toastReducer,
     [baseAPI.reducerPath]: baseAPI.reducer,

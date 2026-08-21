@@ -1,9 +1,11 @@
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router";
 
 import { selectUserCurrency } from "@/entities/user/model/selectors/selectUserCurrency/selectUserCurrency";
+import {cartActions} from "@/entities/cart";
 
 import AddIcon from "@/shared/assets/icons/Add.svg?react";
-import { useAppSelector } from "@/shared/lib";
+import {useAppDispatch, useAppSelector, useToast} from "@/shared/lib";
 import { AppIcon, Button, Price } from "@/shared/ui";
 
 import type { Product } from "../../model/types/Product";
@@ -17,6 +19,9 @@ export interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps) => {
     const { i18n, t } = useTranslation();
+    const navigate = useNavigate();
+    const dispatch = useAppDispatch();
+    const toast = useToast();
     const currency = useAppSelector(selectUserCurrency);
 
     const img = product.images?.find((img) => img.isMain);
@@ -31,10 +36,29 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         ? product.shortDescriptionAr
         : product.shortDescription;
 
+    const handleOpenProduct = () => {
+        navigate(`/products/${product.slug}`, {state: {product}});
+    };
+
+    const handleAddToCart = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.stopPropagation();
+        dispatch(cartActions.addProduct(product));
+        toast.success(`${productName} added to cart`);
+    };
+
     return (
         <div
             className={styles.card}
             data-testid={`product-card-${product.id}`}
+            onClick={handleOpenProduct}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    handleOpenProduct();
+                }
+            }}
         >
             <div className={styles["img-container"]}>
                 <ProductCardImage
@@ -47,6 +71,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
                     size="md"
                     className={styles.button}
                     form="circle"
+                    onClick={handleAddToCart}
                 >
                     <AppIcon Icon={AddIcon} size={24} />
                 </Button>

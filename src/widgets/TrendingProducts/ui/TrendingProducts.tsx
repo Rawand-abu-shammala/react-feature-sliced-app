@@ -87,7 +87,7 @@ export const TrendingProducts = () => {
     return (
         <section className={styles.section}>
             <div className={styles.header}>
-                <h3 className={styles.title}>{t("products.trendingProducts")}</h3>
+                <h3 className={styles.title}>{t("products.trendingFavorites")}</h3>
                 <div className={styles.controls}>
                     <Button size="sm" theme="outline">
                         {t("products.viewAll")}{" "}

@@ -9,11 +9,13 @@ import type {productFiltersSchema} from "@/features/productFilters";
 import type {RegisterFormSchema} from "@/features/register";
 
 import type {UserSchema} from "@/entities/user";
+import type {CartSchema} from "@/entities/cart/model/cartSlice";
 
 import type {baseAPI} from "@/shared/api/rtk/baseAPI";
 
 export interface StateSchema {
     user: UserSchema;
+    cart: CartSchema;
     authByGoogle: AuthByGoogleSchema;
     toast: ToastSchema;
     [baseAPI.reducerPath]: ReturnType<typeof baseAPI.reducer>;

@@ -1,4 +1,6 @@
 
+import {useTranslation} from "react-i18next";
+
 import { Button } from "@/shared/ui";
 
 import type { Tag } from "../../model/types/Tag";
@@ -14,6 +16,7 @@ export interface TagListProps {
 
 export const TagList = (props: TagListProps) => {
   const { isLoading, currentTagId, onTagChange, tags } = props;
+  const {i18n} = useTranslation();
 
   const handleTagChange = (tagId: string) => {
     onTagChange?.(tagId);
@@ -43,7 +46,7 @@ export const TagList = (props: TagListProps) => {
             className={styles.tag}
             onClick={() => handleTagChange(tag.id)}
           >
-            {tag.name}
+            {i18n.language === "ar" ? tag.nameAr ?? tag.name : tag.name}
           </Button>
         );
       })}

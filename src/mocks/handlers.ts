@@ -10,12 +10,17 @@ import { API_URL } from '@/shared/config';
 export const handlers = [
     http.get(`${API_URL}/products`, ({request}) => {
         const query = new URL(request.url).searchParams.get("search")?.trim().toLowerCase() ?? "";
-        const products = query
+        const searchResults = query
             ? mockProducts.filter((product) =>
                 [product.name, product.nameAr, product.slug]
                     .some((value) => value.toLowerCase().includes(query))
             )
             : mockProducts;
+        const tagId = new URL(request.url).searchParams.get("tagId");
+        const tagIndex = Number(tagId?.split("-").at(-1)) - 1;
+        const products = tagId && Number.isInteger(tagIndex)
+            ? searchResults.filter((_, index) => index % 5 === tagIndex % 5)
+            : searchResults;
 
         return HttpResponse.json({
             products,

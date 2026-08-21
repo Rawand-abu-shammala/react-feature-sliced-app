@@ -5,6 +5,7 @@ export const AppRoutes = {
     AUTH_CALLBACK: "auth_callback",
     CATEGORY: 'category',
     SEARCH: "search",
+    PRODUCT: "product",
     NOT_FOUND: "not_found",
 } as const;
 
@@ -17,6 +18,7 @@ export const routePaths: Record<AppRoutes, string> = {
     [AppRoutes.AUTH_CALLBACK]: "/oauth",
     [AppRoutes.CATEGORY]: '/:lng/category/:slug',
     [AppRoutes.SEARCH]: "/search",
+    [AppRoutes.PRODUCT]: "/products/:slug",
 
     // last
     [AppRoutes.NOT_FOUND]: "*",

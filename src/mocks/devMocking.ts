@@ -67,12 +67,17 @@ const buildResponseData = async (url: URL, method: string) => {
 
     if (method === 'GET' && pathname === '/products') {
         const query = url.searchParams.get('search')?.trim().toLocaleLowerCase();
-        const products = query
+        const searchResults = query
             ? mockProducts.filter((product) =>
                 [product.name, product.nameAr, product.slug]
                     .some((value) => value.toLocaleLowerCase().includes(query))
             )
             : mockProducts;
+        const tagId = url.searchParams.get('tagId');
+        const tagIndex = Number(tagId?.split('-').at(-1)) - 1;
+        const products = tagId && Number.isInteger(tagIndex)
+            ? searchResults.filter((_, index) => index % mockTags.length === tagIndex % mockTags.length)
+            : searchResults;
 
         return {
             data: {

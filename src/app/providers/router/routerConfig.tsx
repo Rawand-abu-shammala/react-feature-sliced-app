@@ -7,6 +7,7 @@ import {LoginPage} from "@/pages/Login";
 import {NotFoundPage} from "@/pages/NotFound";
 import {RegisterPage} from "@/pages/Register";
 import {SearchPage} from "@/pages/Search";
+import {ProductPage} from "@/pages/Product";
 
 import {AppRoutes, routePaths} from "@/shared/config";
 
@@ -34,6 +35,10 @@ export const routeConfig: RouteProps[] = [
     {
         path: routePaths[AppRoutes.SEARCH],
         element: <SearchPage/>,
+    },
+    {
+        path: routePaths[AppRoutes.PRODUCT],
+        element: <ProductPage/>,
     },
     {
         path: routePaths[AppRoutes.NOT_FOUND],
