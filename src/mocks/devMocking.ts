@@ -66,11 +66,19 @@ const buildResponseData = async (url: URL, method: string) => {
     }
 
     if (method === 'GET' && pathname === '/products') {
+        const query = url.searchParams.get('search')?.trim().toLocaleLowerCase();
+        const products = query
+            ? mockProducts.filter((product) =>
+                [product.name, product.nameAr, product.slug]
+                    .some((value) => value.toLocaleLowerCase().includes(query))
+            )
+            : mockProducts;
+
         return {
             data: {
                 facets: mockFacets,
-                products: mockProducts,
-                total: mockProducts.length,
+                products,
+                total: products.length,
                 hasMore: false,
             },
         };

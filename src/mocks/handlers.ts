@@ -8,10 +8,18 @@ import { mockBanners } from '@/widgets/PromoCarousel/api/test/mockData';
 import { API_URL } from '@/shared/config';
 
 export const handlers = [
-    http.get(`${API_URL}/products`, () => {
+    http.get(`${API_URL}/products`, ({request}) => {
+        const query = new URL(request.url).searchParams.get("search")?.trim().toLowerCase() ?? "";
+        const products = query
+            ? mockProducts.filter((product) =>
+                [product.name, product.nameAr, product.slug]
+                    .some((value) => value.toLowerCase().includes(query))
+            )
+            : mockProducts;
+
         return HttpResponse.json({
-            products: mockProducts,
-            total: mockProducts.length,
+            products,
+            total: products.length,
             hasMore: false,
             facets: mockFacets,
         });

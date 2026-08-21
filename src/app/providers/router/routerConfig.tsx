@@ -6,6 +6,7 @@ import {HomePage} from "@/pages/Home";
 import {LoginPage} from "@/pages/Login";
 import {NotFoundPage} from "@/pages/NotFound";
 import {RegisterPage} from "@/pages/Register";
+import {SearchPage} from "@/pages/Search";
 
 import {AppRoutes, routePaths} from "@/shared/config";
 
@@ -29,6 +30,10 @@ export const routeConfig: RouteProps[] = [
     {
         path: routePaths[AppRoutes.CATEGORY],
         element: <CategoryPage/>
+    },
+    {
+        path: routePaths[AppRoutes.SEARCH],
+        element: <SearchPage/>,
     },
     {
         path: routePaths[AppRoutes.NOT_FOUND],

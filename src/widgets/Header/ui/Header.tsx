@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useLocation, useNavigate} from "react-router";
 
@@ -22,6 +23,7 @@ export const Header = () => {
     const {pathname} = useLocation();
     const user = useAppSelector(selectUserData);
     const dispatch = useAppDispatch();
+    const [search, setSearch] = useState("");
 
     const handleLoginClick = () => {
         navigate(routePaths.login);
@@ -29,6 +31,16 @@ export const Header = () => {
 
     const handleLogout = () => {
         dispatch(logout());
+    };
+
+    const handleSearchSubmit = () => {
+        const query = search.trim();
+
+        if (query) {
+            navigate(`${routePaths.search}?q=${encodeURIComponent(query)}`, {
+                replace: pathname === routePaths.search,
+            });
+        }
     };
 
     if (pathname === routePaths.login) return;
@@ -46,7 +58,13 @@ export const Header = () => {
                     placeholder={t("header.searchBy")}
                     Icon={<AppIcon size={18} Icon={SearchIcon} theme="background"/>}
                     rounded
-
+                    value={search}
+                    onChange={setSearch}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            handleSearchSubmit();
+                        }
+                    }}
                 />
             </div>
             <div className={styles.section}>
